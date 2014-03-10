@@ -16,7 +16,7 @@ a {
 }
 
 a.buytix {
-	margin-top: 30px;
+	margin: 10px 0 20px 0;
 	font-size:16px;
 	font-family:Arial;
 	font-weight:normal;
@@ -64,6 +64,7 @@ a.buytix:active {
 .wrapper {
   position: relative;
   margin: 0 auto;
+  max-width: 1600px;
 }
 
 .nav {
@@ -82,7 +83,7 @@ a.buytix:active {
 	color: #fff;
 }
 
-section {
+section, .section {
   overflow: hidden;
   padding-bottom: 100px;
 }
@@ -94,13 +95,7 @@ section {
   position: absolute;
   z-index: -1;
 }
-.persist{
-	z-index: 2;
-	max-width: 600px;
-	width: 100%;
-	padding-left: 410px;
-	padding-right: 50px;
-}
+
 .intro {
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwNjBmMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzY3YTRmZiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
 	background: -moz-linear-gradient(top, rgba(0,96,240,0.5) 0%, rgba(103,164,255,0.5) 100%);
@@ -114,8 +109,15 @@ section {
 .intro .rocket {
 	background: url(../img/logo.png) no-repeat top left;
 }
-article {
-	max-width: 600px;
+.intro .article .when{
+	line-height: 25px;
+}
+.cards {
+	display: block;
+}
+
+article, .article {
+	max-width: 900px;
 	margin-left: 410px;
 	padding-right: 50px;
 }
@@ -144,7 +146,7 @@ h2 {
 	background: linear-gradient(to bottom, rgba(103,164,255,0.5) 0%,rgba(223,187,255,0.5) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8067a4ff', endColorstr='#80dfbbff',GradientType=0 );
 }
-.dance article{
+.dance article, .dance .article{
 	padding-top: 400px;
 	padding-bottom: 500px;
 }
@@ -162,7 +164,7 @@ h2 {
 	background: linear-gradient(to bottom, rgba(223,187,255,0.5) 0%,rgba(255,111,78,0.5) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80dfbbff', endColorstr='#80ff6f4e',GradientType=0 );
 }
-.music article{
+.music article, .music .article{
 	padding-top: 400px;
 	padding-bottom: 500px;
 }
@@ -181,12 +183,12 @@ h2 {
 	background: linear-gradient(to bottom, rgba(255,111,78,0.5) 0%,rgba(147,19,91,0.5) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ff6f4e', endColorstr='#8093135b',GradientType=0 );
 }
-.tech article{
+.tech article, .tech .article{
 	padding-top: 400px;
 	padding-bottom: 500px;
 }
 .tech .rocket {
-	background: url(../img/logo.png) no-repeat top left;
+	background: url(../img/bridge.png) no-repeat top left;
 }
 
 .food {
@@ -199,12 +201,12 @@ h2 {
 	background: linear-gradient(to bottom, rgba(147,19,91,0.5) 0%,rgba(31,8,96,0.5) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8093135b', endColorstr='#801f0860',GradientType=0 );
 }
-.food article{
+.food article, .food .article{
 	padding-top: 400px;
 	padding-bottom: 500px;
 }
 .food .rocket {
-	background: url(../img/logo.png) no-repeat top left;
+	background: url(../img/fork.png) no-repeat top left;
 }
 
 .friends {
@@ -217,26 +219,20 @@ h2 {
 	background: linear-gradient(to bottom, rgba(31,8,96,0.5) 0%,rgba(0,36,55,0.5) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#801f0860', endColorstr='#80002437',GradientType=0 );
 }
-.friends article{
+.friends article, .friends .article{
 	padding-top: 400px;
-	padding-bottom: 100px;
+	padding-bottom: 200px;
+}
+.friends .article.sponsors {
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+.article.sponsors h2 {
+	color: #3464a4;
 }
 .friends .rocket {
-	background: url(../img/logo.png) no-repeat top left;
+	background: url(../img/clink.png) no-repeat top left;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -250,8 +246,13 @@ h2 {
 	top: 0;
   }
 
-
+p {
+	font-size: 19px;
+	line-height: 35px;	
+}
 .content {
 	padding: 0 0 20px 0;
-	margin-top: 5px;
+	margin-top: 50px;
+	font-size: 25px;
+	font-style: italic;
 }

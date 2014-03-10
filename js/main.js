@@ -55,7 +55,7 @@ $(window).scroll(function(){
 });
 
 $(window).resize(function(){
-	$(this).triger("scroll");
+	$(this).trigger("scroll");
 })
 
 
