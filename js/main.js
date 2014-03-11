@@ -48,7 +48,34 @@ var rocket = $('.rocket');
 rocket.containWithinParent();
 
 var $html = $('html');
+var $instruct = $('.scroll-reminder');
+var hasScrolled = false;
+
+setTimeout(function(){
+	if(!hasScrolled){
+		$instruct.fadeIn();
+	}
+}, 2000)
+
+var check;
+
 $(window).scroll(function(){
+	if(hasScrolled === false){
+		hasScrolled = true;
+		$instruct.fadeOut();
+	}
+
+	clearTimeout(check);
+	check = setTimeout(function(){
+		hasScrolled = false
+		//if it's not on the bottom
+		if($(window).scrollTop() !== $(document).height() - $(window).height()){
+			$instruct.fadeIn();
+		}else{
+			console.log("You're already at the bottom, silly!")
+		}
+	}, 5000)
+
 	$html.css({
 		"background-position": "0 -" + $(this).scrollTop() * .2 + "px"
 	});

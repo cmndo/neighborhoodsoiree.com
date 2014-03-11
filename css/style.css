@@ -61,6 +61,18 @@ a.buytix:active {
 	z-index: 1;
 	pointer-events: none;
 }
+.scroll-reminder {
+	position: absolute;
+	left: 50%;
+	margin-left: -51px;
+	display: inline-block;
+	bottom: 25px;
+	width: 102px;
+	height: 41px;
+	background: url(../img/scroll-reminder.png) no-repeat 50% 50%;
+	margin-top: 137px;
+	display: none;
+}
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -221,19 +233,19 @@ h2 {
 }
 .friends article, .friends .article{
 	padding-top: 400px;
-	padding-bottom: 200px;
+	padding-bottom: 0px;
 }
 .friends .article.sponsors {
 	padding-top: 100px;
-	padding-bottom: 200px;
+	padding-bottom: 100px;
 }
 .article.sponsors h2 {
 	color: #3464a4;
+	margin-bottom: 37px;
 }
 .friends .rocket {
 	background: url(../img/clink.png) no-repeat top left;
 }
-
 
 
 
